@@ -16,7 +16,7 @@ Yukarıda bahsedilen ödev C++ kullanılarak da gerçekleştirilmiştir.
  
  A[End_index+1] =  A[End_index+1] –  k    tekniği kullanılmıştır.
     
-#Border Security System
+# Border Security System
 Ödev projesinden kısaca bahsedilecek olursa Başkentler ve ülkeler için GEOJSON dosyalarında depolanan geometrik verileri kullanarak, başkentteki ana denetleyici ile en yakın sınır arasında ölçülen sınır çevrelerini ve kablo uzunluklarını hesaplamak amaçlanmıştır.
 JSON formatında hesaplanılmalıdır. 
 
