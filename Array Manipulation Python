@@ -8,9 +8,9 @@ import sys
 
 
 def arrayManipulation(n, queries):
-    # Write your code here   
+   
     arr=[0]*(n+1)
-    for i in queries:
+    for i in queries:  #0(m)
         a=i[0]
         b=i[1]
         k=i[2]
@@ -20,11 +20,11 @@ def arrayManipulation(n, queries):
     current_sum = 0
     max_sum=0
     
-    for i in arr:
+    for i in arr: #0(n)
         current_sum += i
         if current_sum > max_sum:
             max_sum= current_sum
-    return max_sum        
+    return max_sum #toplam  0(n+m)      
   
         
         
