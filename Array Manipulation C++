@@ -9,21 +9,21 @@ vector<string> split(const string &);
 
 
 long arrayManipulation(int n, vector<vector<int>> queries) {
-    vector<long int> A(n,0); // 
+    vector<long int> A(n,0); // vektördeki K değerinin toplamı veya farkı
     long len = queries.size();
     for(long i=0; i<len; i++)
     {
-        //  step 1 as described above
+        //  1. Adım
         A[(queries[i][0])-1] = A[(queries[i][0])-1]+queries[i][2];
         if(queries[i][1]<n) // checking for segmentation fault
         {
-            // step 2 as described above
+            // 2.Adım
             A[(queries[i][1])] = A[(queries[i][1])]-queries[i][2]; 
         }
        
     }
     long sum =0,x=0;
-    // Step 3: Calculating maximum prefix array sum
+    // Maksimum örnek dizisi toplamının hesaplanması
     for(long i=0; i<n; i++)
         {
             x = x + A[i];
