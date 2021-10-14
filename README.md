@@ -9,8 +9,10 @@
                       büyük değer 10 olacağı için 10 değeri dönecektir.
                       
 # Array Manipulation C++ 
+
 Yukarıda bahsedilen ödev C++ kullanılarak da gerçekleştirilmiştir.
 
- A[Start_Index] = A[Start_Index] + k
+ A[Start_Index] = A[Start_Index] + k ,
+ 
  A[End_index+1] =  A[End_index+1] –  k    tekniği kullanılmıştır.
     
