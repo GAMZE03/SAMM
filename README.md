@@ -28,6 +28,9 @@ Programın çalıştırılması kısmına gelinirse ayrıştırılan dosya içer
 Yapılması planlanan algoritma aşağıdaki gibidir.
 
 Terminali Linux'ta açma (Herhangi bir uygulama ile Windows'ta da kullanılabilir.)
+
 Kaynak dizini kitaplıklara, .geojson dosyalarına ve kaynak kod dosyalarına yükleme
+
 Projeyi derlemek için terminalde "make" çalıştırma
+
 Uygun komutu yazma ve sonuçları alma.
