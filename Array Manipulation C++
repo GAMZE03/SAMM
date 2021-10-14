@@ -7,31 +7,32 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 
+
 long arrayManipulation(int n, vector<vector<int>> queries) {
-    long max =INT_MIN;
-    long CurVal =0;
-    vector<int> temp = vector<int>(n);
-    for(vector<int> query : queries)
+    vector<long int> A(n,0); // 
+    long len = queries.size();
+    for(long i=0; i<len; i++)
     {
-        int startIndex = query[0] -1 ;
-        int endIndex = query[1] -1 ;
-        int val = query[2];
-        temp[startIndex] += val;
-        if(endIndex + 1 < temp.size())
+        //  step 1 as described above
+        A[(queries[i][0])-1] = A[(queries[i][0])-1]+queries[i][2];
+        if(queries[i][1]<n) // checking for segmentation fault
         {
-            temp[endIndex +1] -= val;
+            // step 2 as described above
+            A[(queries[i][1])] = A[(queries[i][1])]-queries[i][2]; 
         }
+       
     }
-    for (int val : temp)
-    { 
-        CurVal += val;
-        if(CurVal>max)
+    long sum =0,x=0;
+    // Step 3: Calculating maximum prefix array sum
+    for(long i=0; i<n; i++)
         {
-            max= CurVal;
+            x = x + A[i];
+            if(x>sum)
+            {
+                sum = x;
+            }
         }
-    }
-    return max;
-    
+    return sum;
 }
 
 
