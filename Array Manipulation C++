@@ -15,7 +15,7 @@ long arrayManipulation(int n, vector<vector<int>> queries) {
     {
         //  1. Adım
         A[(queries[i][0])-1] = A[(queries[i][0])-1]+queries[i][2];
-        if(queries[i][1]<n) // checking for segmentation fault
+        if(queries[i][1]<n) // segmentasyon hatası olup olmadığını kontrol etme
         {
             // 2.Adım
             A[(queries[i][1])] = A[(queries[i][1])]-queries[i][2]; 
